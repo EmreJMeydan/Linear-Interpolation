@@ -8,14 +8,6 @@ While learning about Linear Interpolation (Lerp), I explored how a simple formul
 
 I wanted to understand the formula and how it works in practice. Especially how it can be applied to different things.
 
-What I Explored
-Experiment	Description
-    Position	Moving a point between two coordinates.
-    Colour	Blending between colours over time.
-    Sound	Changing audio frequency using interpolation.
-    Text	Experimenting with animated text and visual effects.
-    The Maths Behind It
-
 Linear interpolation calculates a value between a starting point and an ending point using a parameter t.
 
 lerp
@@ -45,15 +37,11 @@ t controls the interpolation, typically between 0 and 1.
 
 As t changes, the result moves between the two values.
 
-JavaScript Implementation
-
 The basic formula can be implemented in JavaScript with just one function:
 
 function lerp(a, b, t) {
     return a + (b - a) * t;
 }
-
-I also explored applying the same idea to objects, allowing multiple values such as x, y, r, g and b to be interpolated together.
 
 Built With
     HTML5 — Page structure and canvas.

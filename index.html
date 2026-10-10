@@ -1,8 +1,54 @@
+
 <!DOCTYPE html>
+<html>
 <head>
     <title>Linear Interpolation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
-    <canvas> id="my_canvas</canvas>
+    <canvas id="my_canvas"></canvas>
+
+    <script>
+        const my_canvas = document.getElementById("my_canvas");
+
+        my_canvas.width = window.innerWidth;
+        my_canvas.height = window.innerHeight;
+
+        const A = { x: 100, y: 200 };
+        const B = { x: 400, y: 200 };
+
+        const ctx = my_canvas.getContext("2d");
+
+        drawDot(A, "A");
+        drawDot(B, "B");
+
+        const C={
+            x:A.x+(B.x-A.x)*Math.random(),
+            y:200
+        };
+        drawDot(C, "C")
+
+        function drawDot(pos,label){
+
+            ctx.beginPath();
+            ctx.fillStyle = "white";
+            ctx.strokeStyle = "black";
+
+            ctx.arc(pos.x, pos.y, 10, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            ctx.fillStyle="black";
+            ctx.textAlign="center";
+            ctx.textBaseline="middle";
+            ctx.font="bold 14px Arial";
+            ctx.fillText(label,pos.x,pos.y);
+        }
+
+    </script>
 </body>
 </html>

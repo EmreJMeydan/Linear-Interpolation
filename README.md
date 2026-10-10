@@ -1,14 +1,16 @@
-📐 Linear Interpolation — Lerp
+📐 Linear Interpolation (Lerp)
 
-<p align="center"> Exploring the math </p>
+Explore the mathematics behind Linear Interpolation (Lerp) and discover how a simple formula can create smooth transitions between values, positions, colours, and even sound.
 
-<p align="center"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /> </p>
+This project demonstrates how Lerp works mathematically and how it can be applied in practice using HTML5, CSS3, and JavaScript.
 
-While learning about Linear Interpolation (Lerp), I explored how a simple formula can be used to smoothly transition between values and create different visual and audio effects.
+🧮 The Mathematics
 
-I wanted to understand the formula and how it works in practice. Especially how it can be applied to different things.
+Linear interpolation calculates a value between a starting point and an ending point using a parameter 
+𝑡
+.
 
-Linear interpolation calculates a value between a starting point and an ending point using a parameter t.
+The formula is:
 
 lerp
 ⁡
@@ -31,34 +33,51 @@ lerp
 
 Where:
 
-a is the starting value.
-b is the ending value.
-t controls the interpolation, typically between 0 and 1.
+a — The starting value.
+b — The ending value.
+t — The interpolation parameter, typically between 0 and 1.
 
 As t changes, the result moves between the two values.
 
-The basic formula can be implemented in JavaScript with just one function:
+For example:
+
+When t = 0, the result is a.
+When t = 0.5, the result is halfway between a and b.
+When t = 1, the result is b.
+
+💻 JavaScript Implementation
+
+Linear interpolation can be implemented in JavaScript with a single function:
 
 function lerp(a, b, t) {
     return a + (b - a) * t;
 }
 
-Built With
-    HTML5 — Page structure and canvas.
-    CSS3 — Styling and visual presentation.
-    JavaScript — Interpolation logic and animation.
-    Canvas API — Drawing points and text.
-    Web Audio API — Experimenting with sound.
+Example
+const start = 10;
+const end = 50;
 
-What is Demonstrated
-    How linear interpolation works mathematically.
-    How to interpolate between two positions.
-    How the same formula can work with colours and sound.
+console.log(lerp(start, end, 0));   // 10
+console.log(lerp(start, end, 0.5)); // 30
+console.log(lerp(start, end, 1));   // 50
 
-Running the Project
-    Clone or download this repository.
-    Open the project folder in your code editor.
-    Open the HTML file in your browser.
-    Experiment with the code and see how changing the interpolation parameter affects the results.
+
+The same function can interpolate between any two numeric values, making it useful for animations, graphics, and other interactive applications.
+
+✨ What This Project Demonstrates
+Mathematics: Understanding the linear interpolation formula.
+Position: Interpolating between two points to create smooth movement.
+Colour: Transitioning between colours by interpolating their component values.
+Sound: Exploring interpolation concepts using the Web Audio API.
+Animation: Using JavaScript to update values over time and create visual effects.
+
+🚀 Getting Started
+Run Locally
+Clone or download this repository.
+Open the project folder in your code editor.
+Open the HTML file in your web browser.
+Experiment with the interpolation parameter and observe how the results change.
+
+For the simplest setup, open the HTML file directly in your browser. If your project uses browser features that require a local server, run it using your editor's local development server.
 
 No external libraries are required.

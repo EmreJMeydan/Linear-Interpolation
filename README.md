@@ -15,7 +15,7 @@ Linear interpolation calculates a value between a starting value and an ending v
 The formula is:
 
 $$
-\operatorname{lerp}(a,b,t)=a+(b-a)t
+\text{lerp}(a,b,t)=a+(b-a)t
 $$
 
 Where:
@@ -52,11 +52,10 @@ For example:
 
 1. Clone or download this repository.
 2. Open the `index.html` file in a web browser.
-3. Watch the point, background colour, and text animate.
-4. Click the canvas to enable the sound feature.
+3. Click the canvas to enable the sound feature.
 
 ## How It Works
 
-The `lerp()` function calculates a value between two numbers. The `vLerp()` function applies linear interpolation to objects containing multiple values, such as coordinates and RGB colour components.
+The `lerp()` function calculates a value between two numbers using the interpolation formula. The `vLerp()` function applies linear interpolation to objects containing multiple values, such as coordinates and RGB colour components.
 
 A sine function generates a value that smoothly moves between `0` and `1`, allowing the animations to repeat continuously in both directions.

@@ -1,50 +1,62 @@
-📐 Linear Interpolation (Lerp)
+# Linear Interpolation (Lerp)
 
-Explore the mathematics behind Linear Interpolation (Lerp) and discover how a simple formula can create smooth transitions between values, positions, colours, and even sound.
+A JavaScript project demonstrating linear interpolation (lerp) through animated movement, colour transitions, sound frequency changes, and text animations.
 
-This project demonstrates how Lerp works mathematically and how it can be applied in practice using HTML5, CSS3, and JavaScript.
+## Overview
 
-🧮 The Mathematics
+This project uses HTML Canvas and JavaScript to demonstrate how linear interpolation can smoothly transition between two values over time.
 
-Linear interpolation calculates a value between a starting point and an ending point using a parameter 
-𝑡
-.
+A point moves back and forth between two positions while the background colour changes between orange and blue. The project also includes an interactive sound feature that changes frequency and a text animation that uses lerp to adjust its dash pattern.
+
+## The Mathematics
+
+Linear interpolation calculates a value between a starting value and an ending value using a parameter `t`.
 
 The formula is:
 
-lerp
-⁡
-(
-𝑎
-,
-𝑏
-,
-𝑡
-)
-=
-𝑎
-+
-(
-𝑏
-−
-𝑎
-)
-𝑡
+$$
+\operatorname{lerp}(a,b,t)=a+(b-a)t
+$$
 
 Where:
 
-a — The starting value.
-b — The ending value.
-t — The interpolation parameter, typically between 0 and 1.
-
-As t changes, the result moves between the two values.
+- `a` — The starting value.
+- `b` — The ending value.
+- `t` — The interpolation parameter, typically between `0` and `1`.
 
 For example:
 
-When t = 0, the result is a.
-When t = 0.5, the result is halfway between a and b.
-When t = 1, the result is b.
+- When `t = 0`, the result is `a`.
+- When `t = 0.5`, the result is halfway between `a` and `b`.
+- When `t = 1`, the result is `b`.
 
-For the simplest setup, open the HTML file directly in your browser. If your project uses browser features that require a local server, run it using your editor's local development server.
+## Features
 
-No external libraries are required.
+- Animates a point between two positions using linear interpolation.
+- Smoothly transitions the background colour between two colours.
+- Changes sound frequency using interpolated values.
+- Animates text using a changing line dash pattern.
+- Uses a shared `lerp()` function for different types of values.
+- Uses `requestAnimationFrame()` to update the animation continuously.
+- Enables sound when the canvas is clicked.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- HTML Canvas API
+- Web Audio API
+
+## How to Run
+
+1. Clone or download this repository.
+2. Open the `index.html` file in a web browser.
+3. Watch the point, background colour, and text animate.
+4. Click the canvas to enable the sound feature.
+
+## How It Works
+
+The `lerp()` function calculates a value between two numbers. The `vLerp()` function applies linear interpolation to objects containing multiple values, such as coordinates and RGB colour components.
+
+A sine function generates a value that smoothly moves between `0` and `1`, allowing the animations to repeat continuously in both directions.
